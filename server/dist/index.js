@@ -25,6 +25,7 @@ client.on('message', function (topic, message) {
     });
     const point = Calc_1.calculatePoint(circles.filter(p => p.r < 10));
     if (point !== null) {
+        // client.publish("iot-hub-kzn", { point: point })
         console.log(`mobile: ${point.x} : ${point.y}`);
     }
     // console.log(JSON.stringify(JSON.parse(message.toString()), undefined, 2))

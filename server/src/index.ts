@@ -38,8 +38,9 @@ client.on('connect', function () {
         } as Circle;
     });
     const point = calculatePoint(circles.filter(p => p.r < 10));
-    if (point !== null){
-    console.log(`mobile: ${point.x} : ${point.y}`);
+    if (point !== null) {
+        // client.publish("iot-hub-kzn", { point: point })
+        console.log(`mobile: ${point.x} : ${point.y}`);
     } 
     // console.log(JSON.stringify(JSON.parse(message.toString()), undefined, 2))
   });
