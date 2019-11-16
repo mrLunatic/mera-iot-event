@@ -31,9 +31,6 @@ client.on('connect', function () {
   client.on('message', function (topic, message) {
     const packet: MqttPacker = JSON.parse(message.toString());
     console.log(`MobileId: ${packet.mobileId}`);
-    for (const beacon of packet.advertisingPacketList) {
-        console.log(`b: ${beacon.beaconId}, x: ${beacon.xCoord}, y: ${beacon.yCoord} d: ${calcDistance(beacon)}`)
-    }
     const circles: Array<Circle> = packet.advertisingPacketList.map(p => {
         return {
             center: new Point(p.xCoord, p.yCoord),

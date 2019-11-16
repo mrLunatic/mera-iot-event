@@ -17,9 +17,6 @@ client.on('connect', function () {
 client.on('message', function (topic, message) {
     const packet = JSON.parse(message.toString());
     console.log(`MobileId: ${packet.mobileId}`);
-    for (const beacon of packet.advertisingPacketList) {
-        console.log(`b: ${beacon.beaconId}, x: ${beacon.xCoord}, y: ${beacon.yCoord} d: ${calcDistance(beacon)}`);
-    }
     const circles = packet.advertisingPacketList.map(p => {
         return {
             center: new Calc_1.Point(p.xCoord, p.yCoord),
