@@ -49,4 +49,10 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
+    <feature name="BLE">
+        <param name="ios-package" value="EVOBLE" />
+    </feature>
+    <feature name="CordovaMQTTPlugin">
+        <param name="ios-package" value="CordovaMQTTPlugin" />
+    </feature>
 </widget>
