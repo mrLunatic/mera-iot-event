@@ -1,0 +1,4 @@
+#Sat Nov 16 14:38:40 MSK 2019
+base.0=C\:\\Projects\\mera-iot-event\\mobile-app\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
